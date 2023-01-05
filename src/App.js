@@ -1,25 +1,33 @@
-import logo from './logo.svg';
-import './App.css';
+import Body from "./components/Body";
+import Screen from "./components/Screen";
+import ButtonBody from "./components/ButtonBody";
+import Buttons from "./components/Buttons";
 
-function App() {
+import React, {useState} from "react";
+
+const buttonValues = [
+  ["C", "+/-", "%", "/"],
+  ["7", "8", "9", "x"],
+  ["4", "5", "6", "-"],
+  ["1", "2", "3", "+"],
+  ["0", ".", "="],
+];
+
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Body>
+      <Screen value="0" />
+      <ButtonBody>
+        <Buttons
+          value="0"
+          className=""
+          onClick={() => {
+            console.log("Clicked");
+          }} 
+        />
+      </ButtonBody>
+    </Body>
   );
-}
+};
 
 export default App;

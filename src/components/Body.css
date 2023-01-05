@@ -1,0 +1,8 @@
+.Body {
+    height: 500px;
+    width: 300px;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: blue;
+    background-image: linear-gradient(315deg, #485461 0%, #28313b 74%);
+}
